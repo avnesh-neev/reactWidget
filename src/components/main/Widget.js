@@ -108,7 +108,7 @@ class Widget extends Component {
 
 	render() {
 		return (
-			<div>
+			<div style={{ width: 250, border: '1px solid #0067FF', borderRadius: 2 }}>
 				<ActionBarComp addNewChild={ this.addChild } removeChild={ this.removeChild }/>
 				<TableSectionComp tableRows={ this.state.tableRows } checkAction={this.createDeleteRowList}
 					handleInputValue={this.handleInputValue}/>

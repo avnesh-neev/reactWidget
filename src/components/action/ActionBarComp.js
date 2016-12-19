@@ -19,15 +19,19 @@ class ActionBarComp extends Component {
 
 	render() {
 		return (
-			<div style={{ color: 'blue', border: '1px solid grey'}}>
-				<div style={{ display: 'inline-block', padding: 3}}>
+			<div style={{ color: 'blue', position: 'relative', borderBottom: '1px solid #0067FF' }}>
+				<div style={{ display: 'inline-block', paddingLeft: 6, paddingTop: 3}}>
 					<input type="checkbox" />
 				</div>
-				<div style={{ display: 'inline-block', padding: 3}}>
+				<div style={{ display: 'inline-block', padding: 6, fontSize: 13, position: 'absolute', top: -3 }}>
 					Transport Domain
 				</div>
-				<div style={{ display: 'inline-block', padding: 3}} onClick={this.props.addNewChild}>	+ </div>
-				<div style={{ display: 'inline-block', padding: 3}} onClick={this.props.removeChild}> - </div>
+				<div style={{ float: 'right' }}>
+					<button style={{ border: '1px solid #0067FF', borderRadius: 2, backgroundColor: '#86AFC9', color: '#EEEEEE'}} 
+							onClick={this.props.removeChild}> - </button>
+					<button style={{ border: '1px solid #0067FF', borderRadius: 2, backgroundColor: '#86AFC9', color: '#EEEEEE'}} 
+							onClick={this.props.addNewChild}>	+ </button>
+				</div>
 			</div>
 		)
 	}
