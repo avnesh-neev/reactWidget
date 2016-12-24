@@ -1,5 +1,5 @@
 import React, {Component } from 'react'
-// import UserInputField from './UserInputField'
+import DropdownComp from '../select/DropdownComp'
 
 class UserValueRow extends Component {
 	constructor(props) {
@@ -50,8 +50,8 @@ class UserValueRow extends Component {
 	render() {
 		// console.log('this prop key' + this.props.row);
 		return (
-			<div style={{ color: 'blue', border: '1px solid grey', position: 'relative'}}>
-				<div style={{ display: 'inline-block', padding: 3}}>
+			<div style={{ color: 'blue', position: 'relative'}}>
+				<div style={{ display: 'inline-block', padding: 6}}>
 					<input className='rowCheckbox' type="checkbox" value={'' +this.props.row} onClick={this.props.checkAction}/>
 				</div>
 				<div style={{ display: 'inline-block' }}	>
@@ -67,13 +67,9 @@ class UserValueRow extends Component {
 					</div>
 				}					
 				</div>
-				{ this.state.dropdownVisibility ?
-					<div style={{ backgroundColor: '#AABBCC', position: 'absolute', top: 30, 
-							zIndex: 100, width: '100%', padding: 10, color: 'white'}}>
-						Hello
-					</div>
-					: ''
-				}
+
+				{ this.state.dropdownVisibility ? <DropdownComp /> : '' }
+				
 			</div>
 		)
 	}
